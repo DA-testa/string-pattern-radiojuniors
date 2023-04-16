@@ -4,10 +4,10 @@ def read_input():
     cmd = input().upper()
 
     if cmd == "I":
-        return (input().rstrip(), input().rstrip())
+        return (input().strip(), input().strip())
     elif cmd == "F":
         with open("tests/06") as f:
-            return (f.readline().rstrip(), f.readline().rstrip())
+            return (f.readline().strip(), f.readline().strip())
 
 
 def print_occurrences(output):
