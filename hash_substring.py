@@ -1,12 +1,12 @@
 # python3
 
 def read_input():
-    input_type = input()
+    input = input()
 
-    if input_type == "i":
+    if input == "i":
         pattern = input()
         text = input()
-    elif input_type == "f":
+    elif input == "f":
         file_name = input()
         with open(file_name) as f:
             pattern = f.readline()
@@ -14,25 +14,29 @@ def read_input():
 
     return (pattern.rstrip(), text.rstrip())
 
+
 def print_occurrences(output):
     print(' '.join(map(str, output)))
 
-def get_occurrences(pattern, text):
-    if len(pattern) > len(text):
+
+def get_occurrences(patterninput, textinput):
+    length = len(patterninput)
+    if length > len(textinput):
         return []
 
-    patternhash = hash(pattern)
-    temphash = hash(text[:len(pattern)])
+    patternhash = hash(patterninput)
+    temphash = hash(textinput[:length])
     occurrences = []
 
-    for i in range(len(text) - len(pattern) + 1):
-        if temphash == patternhash and text[i:i+len(pattern)] == pattern:
+    for i in range(len(textinput) - length + 1):
+        if temphash == patternhash and textinput[i:i+length] == patterninput:
             occurrences.append(i)
 
-        if i < len(text) - len(pattern):
-            temphash = hash(text[i+1:i+len(pattern)+1])
+        if i < len(textinput) - length:
+            temphash = hash(textinput[i+1:i+length+1])
 
     return occurrences
+
 
 if __name__ == '__main__':
     print_occurrences(get_occurrences(*read_input()))
