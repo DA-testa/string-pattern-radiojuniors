@@ -14,6 +14,9 @@ def read_input():
             pattern = f.readline()
             text = f.readline()
 
+    if pattern == None or text == None:
+        return []
+    
     return (pattern.rstrip(), text.rstrip())
 
 
