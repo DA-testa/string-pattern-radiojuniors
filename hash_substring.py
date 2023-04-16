@@ -5,7 +5,7 @@ def read_input():
     pattern = ""
     text = ""
 
-    if cmd.startswith('I'):
+    if cmd == "I":
         pattern = input().rstrip()
         text = input().rstrip()
     elif cmd.startswith('F'):
