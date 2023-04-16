@@ -2,7 +2,9 @@
 
 def read_input():
     cmd = input()
-    global pattern, text
+    pattern = None
+    text = None
+
     if cmd == "i":
         pattern = input()
         text = input()
