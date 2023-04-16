@@ -6,17 +6,18 @@ def read_input():
     text = ""
 
     if cmd == "I":
-        pattern = input()
-        text = input()
+        pattern = input().strip()
+        text = input().strip()
     elif cmd == "F":
         with open("tests/06") as f:
             pattern = f.readline()
             text = f.readline()
 
+    # print(pattern.rstrip(),text.rstrip())
     # if pattern == None or text == None:
     #     return []
     
-    return (pattern.strip(), text.strip())
+    return (pattern.rstrip(), text.rstrip())
 
 
 def print_occurrences(output):
