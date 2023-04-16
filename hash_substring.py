@@ -1,12 +1,12 @@
 # python3
 
 def read_input():
-    input = input()
+    cmd = input()
 
-    if input == "i":
+    if cmd == "i":
         pattern = input()
         text = input()
-    elif input == "f":
+    elif cmd == "f":
         file_name = input()
         with open(file_name) as f:
             pattern = f.readline()
