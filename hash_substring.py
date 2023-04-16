@@ -1,14 +1,14 @@
 # python3
 
 def read_input():
-    cmd = input()
+    cmd = input().upper()
     pattern = ""
     text = ""
 
-    if cmd == "i":
+    if cmd == "I":
         pattern = input()
         text = input()
-    elif cmd == "f":
+    elif cmd == "F":
         file_name = input()
         with open(file_name) as f:
             pattern = f.readline()
