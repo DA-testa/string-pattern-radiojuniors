@@ -2,21 +2,12 @@
 
 def read_input():
     cmd = input().upper()
-    pattern = ""
-    text = ""
 
     if cmd == "I":
-        pattern = input()
-        text = input()
+        return (input().rstrip(), input().rstrip())
     elif cmd == "F":
         with open("tests/06") as f:
-            pattern = f.readline()
-            text = f.readline()
-
-    # if pattern == None or text == None:
-    #     return []
-    
-    return (pattern.rstrip(), text.rstrip())
+            return (f.readline().rstrip(), f.readline().rstrip())
 
 
 def print_occurrences(output):
