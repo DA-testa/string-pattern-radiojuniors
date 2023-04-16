@@ -6,12 +6,12 @@ def read_input():
     text = ""
 
     if cmd == "I":
-        pattern = input().strip()
-        text = input().strip()
+        pattern = input().rstrip()
+        text = input().rstrip()
     elif cmd == "F":
         with open("tests/06") as f:
-            pattern = f.readline()
-            text = f.readline()
+            pattern = f.readline().rstrip()
+            text = f.readline().rstrip()
 
     # print(pattern.rstrip(),text.rstrip())
     # if pattern == None or text == None:
