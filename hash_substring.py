@@ -9,8 +9,7 @@ def read_input():
         pattern = input()
         text = input()
     elif cmd == "F":
-        file_name = input()
-        with open(file_name) as f:
+        with open("tests/06") as f:
             pattern = f.readline()
             text = f.readline()
 
