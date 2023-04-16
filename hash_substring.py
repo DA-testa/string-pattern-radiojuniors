@@ -2,8 +2,8 @@
 
 def read_input():
     cmd = input()
-    pattern = None
-    text = None
+    pattern = ""
+    text = ""
 
     if cmd == "i":
         pattern = input()
@@ -14,8 +14,8 @@ def read_input():
             pattern = f.readline()
             text = f.readline()
 
-    if pattern == None or text == None:
-        return []
+    # if pattern == None or text == None:
+    #     return []
     
     return (pattern.rstrip(), text.rstrip())
 
