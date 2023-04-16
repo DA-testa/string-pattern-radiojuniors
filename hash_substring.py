@@ -1,5 +1,5 @@
 # python3
-
+global pattern, text
 def read_input():
     cmd = input()
 
