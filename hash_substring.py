@@ -1,14 +1,14 @@
 # python3
 
 def read_input():
-    cmd = input().upper()
+    cmd = input()
     pattern = ""
     text = ""
 
-    if cmd == "I":
+    if cmd.startswith('I'):
         pattern = input().rstrip()
         text = input().rstrip()
-    elif cmd == "F":
+    elif cmd.startswith('F'):
         with open("tests/06") as f:
             pattern = f.readline().rstrip()
             text = f.readline().rstrip()
@@ -17,7 +17,7 @@ def read_input():
     # if pattern == None or text == None:
     #     return []
     
-    return (pattern.rstrip(), text.rstrip())
+    return (pattern, text)
 
 
 def print_occurrences(output):
