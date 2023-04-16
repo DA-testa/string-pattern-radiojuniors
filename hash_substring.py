@@ -1,11 +1,11 @@
 # python3
 
 def read_input():
-    cmd = input()
+    cmd = input().upper()
     pattern = ""
     text = ""
 
-    if cmd == "I":
+    if cmd.startswith('I'):
         pattern = input().rstrip()
         text = input().rstrip()
     elif cmd.startswith('F'):
